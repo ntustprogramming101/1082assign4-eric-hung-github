@@ -1,23 +1,40 @@
 //canvas setting
-var canvas = document.getElementById("mainCanvas");
+var canvas = document.getElementById("pde");
 var ctx = canvas.getContext('2d');
+
+
 //------------------------------------------------------
 
-// img setting------------------------------------------
-var soldier = new Image();
-soldier.src = "img/soldier.png";
+// img loadding------------------------------------------
+if (preLoadImages()) {
+
+}
+
 //------------------------------------------------------
 
-// 
 var x = 10;
-
 
 // main draw
 
+function drawSoil() {
 
-function draw() {
-    
-    ctx.drawImage(soldier,0,0);
 }
 
-setInterval(draw(), 100);
+
+
+
+function draw() {
+
+    //ctx.fillRect(25, 25, 100, 100);
+    //ctx.clearRect(45, 45, 60, 60);
+    //ctx.strokeRect(50, 50, 50, 50);
+
+
+    console.log("dd");
+
+    window.requestAnimationFrame(draw);
+}
+
+draw();
+
+
