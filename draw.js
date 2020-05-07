@@ -6,13 +6,9 @@ var ctx = canvas.getContext('2d');
 //------------------------------------------------------
 
 // img loadding------------------------------------------
-if (preLoadImages()) {
-
-}
+preLoadImages();
 
 //------------------------------------------------------
-
-var x = 10;
 
 // main draw
 
@@ -21,7 +17,9 @@ function drawSoil() {
 }
 
 
-
+function update(){
+    
+}
 
 function draw() {
 
@@ -30,11 +28,11 @@ function draw() {
     //ctx.strokeRect(50, 50, 50, 50);
 
 
-    console.log("dd");
-
     window.requestAnimationFrame(draw);
 }
 
 draw();
+//update();
+var frame = setInterval(update,1000/60);
 
 
